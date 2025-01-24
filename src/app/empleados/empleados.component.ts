@@ -1,20 +1,15 @@
-import { CommonModule } from "@angular/common";
-import { Component, NgModule } from "@angular/core";
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
+import { EmpleadoComponent } from "../empleado/empleado.component";
 
 @Component({
     selector:"app-empleados",
-    //standalone=true,
     templateUrl:"./empleados.component.html",
     styleUrl:"./empleados.component.css",
-    imports: []//,
-    //standalone=true
+    imports: [EmpleadoComponent],
+    schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class EmpleadosComponent{
 
 }
 
-/*@NgModule({
-    imports:[CommonModule],
-    declarations:[EmpleadosComponent]
-})*/
 
