@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+//import { EmpleadosComponent } from "./empleados/empleados.component";
 
 @Component({
   selector: 'app-raiz',
@@ -9,4 +10,5 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'appbund';
+  saludos='Hola a todo el mundo';
 }
