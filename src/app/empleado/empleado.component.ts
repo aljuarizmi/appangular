@@ -9,11 +9,24 @@ import { Component } from '@angular/core';
 })
 export class EmpleadoComponent {
 private nombre="Jackie Giovanni";
-private apellido="Mora Nonato"
+private apellido="Mora Nonato";
+private distrito="San Juan de Lurigancho";
+habilitacionCuadro=true;
+usuRegistrado=false;
+getRegistroUsuario(){
+  this.usuRegistrado=true;
+}
 getNombre(){
   return this.nombre
 }
 getApellido(){
   return this.apellido
 }
+getDistrito(){
+  return this.distrito
+}
+llamaDistrito(value:String){
+
+}
+
 }

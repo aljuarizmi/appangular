@@ -1,2 +1,7 @@
 <p>Nombres: {{getNombre()}}</p>
 <p>Apellidos: {{getApellido()}}</p>
+<p>Distrito: {{distrito.value}}</p>
+Introduce el distrito:&nbsp;<input type="text" #distrito (keyup)="0" [disabled]="habilitacionCuadro">
+<input type="button" value="Click aqui!" (click)="llamaDistrito(distrito.value)"/>
+Registrado: <input type="checkbox" id="registro" [checked]="usuRegistrado"/>
+{{getRegistroUsuario()}}
