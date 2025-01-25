@@ -1,7 +1,11 @@
 <p>Nombres: {{getNombre()}}</p>
 <p>Apellidos: {{getApellido()}}</p>
-<p>Distrito: {{distrito.value}}</p>
-Introduce el distrito:&nbsp;<input type="text" #distrito (keyup)="0" [disabled]="habilitacionCuadro">
-<input type="button" value="Click aqui!" (click)="llamaDistrito(distrito.value)"/>
-Registrado: <input type="checkbox" id="registro" [checked]="usuRegistrado"/>
+<p>Distrito: {{getDistrito()}}</p>
+<!--Introduce el distrito:&nbsp;<input type="text" #distrito (keyup)="0" [disabled]="habilitacionCuadro">-->
+<!--Introduce el distrito:&nbsp;<input type="text" (input)="cambiaDistrito($event)">-->
+Introduce el distrito:&nbsp;<input type="text" [(ngModel)]="distrito">
+<!--<input type="button" value="Click aqui!" (click)="llamaDistrito(distrito.value)"/>-->
+{{textoDeRegistro}}<br/>
+Registrado: <input type="radio" name="registro" value="si" id="registro" [checked]="usuRegistrado"(click)="setUsuarioRegistrado($event)"/>
+No Registrado: <input type="radio" name="registro" value="no" id="noregistro" [checked]="usuRegistrado"(click)="setUsuarioRegistrado($event)"/>
 {{getRegistroUsuario()}}
